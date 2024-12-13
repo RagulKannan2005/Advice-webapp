@@ -1,0 +1,188 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: radial-gradient(circle, #1a1a2e, #0f3460);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background Animation */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: animateBg 10s infinite;
+  z-index: -1;
+}
+
+/* Keyframes for Background */
+@keyframes animateBg {
+  0% {
+    transform: translate(-25%, -25%);
+  }
+  50% {
+    transform: translate(25%, 25%);
+  }
+  100% {
+    transform: translate(-25%, -25%);
+  }
+}
+
+/* Advice Component Styling */
+div {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  animation: fadeIn 1s ease-out;
+  max-width: 90%;
+}
+
+/* Heading Styling */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 1s ease-in-out;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e94560;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: rgb(46, 42, 42);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Counter Text */
+p {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a4a4a4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframes for Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Keyframes for Zoom In */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styles */
+
+/* For small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  div {
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  div {
+    padding: 20px 30px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* For large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  div {
+    max-width: 600px;
+    padding: 30px 50px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
